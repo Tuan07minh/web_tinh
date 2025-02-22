@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Trí tuệ nhân tạo </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -14,315 +15,348 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-        }
-        .heroo {
-            
-            min-height: 300px; /* Điều chỉnh chiều cao tùy ý */
-            background: linear-gradient(to right, #ffe4e6, #ffffff); /* Gradient từ hồng nhạt sang trắng */
-            text-align: center; /* Căn giữa chữ */
-        }
-        .hero-contentt {
-            max-width: 1200px;
-            padding: 50px;
-        }
-        .chuviet{
-            color: #000; /* Màu chữ đen */
-            font-size: 40px;
-        }
-        .chuvietthuong{
-            font-size: 24px;
-            color: #333;
-            margin-top: 10px;
-        }
+    background: linear-gradient(to right, #ffe4e6, #ffffff);
+    height: 100vh; /* Chiều cao toàn màn hình */
+    }
+    .heroo-section {
+        width: 100vw; /* Chiều rộng bằng 100% bị lỗi màn hình */
+        height: 100vh; /* Chiều cao bằng 100% màn hình */
+        background: url("https://i.imgur.com/p4NBaMT.png") no-repeat center center;
+        background-size: cover; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
 
-        header {
-            background-color: #800000;
-            color: white;
-            padding: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .heroo-content {
+        background: rgba(0, 0, 0, 0.5); 
+        padding: 50px;
+        border-radius: 50px;
+        position: relative; 
+        left: -600px; 
+        top: 300px;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+    .cta-button {
+        background-color: blue; 
+        color: white; 
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        .logo img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
+    .cta-button:hover {
+        background-color: darkblue; 
+    }
+
+    header {
+        background-color: #800000;
+        color: white;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    h1 {
+        color: green;
+    }
+
+    h2 {
+        color: red;
+    }
+
+    h3 {
+        color: green ;
+    }
+
+    p {
+        color: purple;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        flex: 1;
+        margin-bottom: 200px;
         
-        h1 {
-            color: blue;
-        }
+    }
 
-        h2 {
-            color: blue;
-        }
+    .hero-image {
+        float: left;
+        margin-right: 10px;
+        margin-top: -100px; 
+        padding-left: 50px; 
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+    .hero-image img {
+        max-width: 1500px;
+        height: auto;
+        margin-top: 50px; 
+    }
 
-        nav li {
-            margin-left: 20px;
-        }
+    .about, .applications {
+        margin-top: -100px;
+    }
+    .tab-container {
+        display: flex;
+        background: #fff;
+        border-radius: 50px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        max-width: 600px;
+        margin: 50px auto;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    .tab {
+        flex: 1;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        color: #333;
+        background: #f5f5f5;
+    }
 
-        main {
-            padding: 5px;
-        }
+    .tab.active {
+        background: linear-gradient(90deg, #d946ef, #22d3ee);
+        color: white;
+    }
 
-        .hero {
-            display: flex;
-            align-items: center;
-        }
+    .video-container {
+        width: 560px; /* Chiều rộng video 600 phù hợp nhma tùy máy*/
+        max-width: 100%;
+    }
+    .video-container iframe {
+        width: 100%;
+        height: 315px;
+        padding-left: 700px; 
+    }
 
-        .hero-content {
-            flex: 1;
-            margin-bottom: 200px;
-        }
+    .applications {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        .hero-image {
-            float: left;
-            margin-right: 50px;
-            margin-top: 10px; 
-        }
+    .application {
+        flex: 1;
+        margin: 100px;
+    }
 
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-        }
+    .application img {
+        max-width: 100%;
+    }
 
-        .about, .applications {
-            margin-top: -30px;
-        }
-        .tab-container {
-            display: flex;
-            background: #fff;
-            border-radius: 50px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            max-width: 600px;
-            margin: 50px auto;
-        }
+    footer {
+        background-color: #f8f9fa;
+        /* Đã xóa padding */
+        text-align: center;
+    }
 
-        .tab {
-            flex: 1;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            font-weight: bold;
-            color: #333;
-            background: #f5f5f5;
-        }
+    .xuanyen{
+        padding-left: 50px; 
+    }
+    .xuanyen img {
+        float: Right; 
+        width: 700px; 
+        margin-right: 500px;
+        padding-left: 50px; 
+    }
+    .faq-container {
+        max-width: 800px;
+        margin: 0px auto;
+        border-top: 1px solid #ddd;
+    }
+    .faq-item {
+        border-bottom: 1px solid #ddd;
+    }
+    .faq-question {
+        padding: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        color: #333;
+    }
+    .faq-question.active + .faq-answer {
+        display: block;
+    }
 
-        .tab.active {
-            background: linear-gradient(90deg, #d946ef, #22d3ee);
-            color: white;
-        }
+    .faq-title {
+        text-align: center; 
+        margin-left: -1100px; /* Dịch sang trái một chút (tùy chỉnh giá trị) */
+    }
+    .feedback-container {
+        border: 1px solid #ccc; 
+        padding: 20px; 
+        margin-bottom: 20px; 
+        background: linear-gradient(to right, #ffe4e6, #ffffff); 
+    }
 
-        .video-container {
-            width: 560px; /* Chiều rộng video */
-            max-width: 100%;
-        }
-        .video-container iframe {
-            width: 100%;
-            height: 315px;
-            padding-left: 700px; 
-        }
+    .feedback-container h2 {
+        color: #333;
+    }
 
-        .applications {
-            display: flex;
-            justify-content: space-between;
-        }
+    .feedback-container textarea {
+        width: 100%; 
+        border: 1px solid #ccc;
+        padding: 10px; /* Khoảng cách bên trong vùng nhập liệu 20px cx dc*/
+    }
 
-        .application {
-            flex: 1;
-            margin: 30px;
-        }
+    .feedback-container button {
+        background-color: #007bff; 
+        color: white;
+        padding: 10px 20px; /* Kích thước nút */
+        border: none; 
+        cursor: pointer; /* Hiệu ứng khi di chuột vào */
+    }
 
-        .application img {
-            max-width: 100%;
-        }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-        footer {
-            background-color: #f8f9fa;
-            /* Đã xóa padding */
-            text-align: center;
-        }
-        .xuanyen img {
-            float: Right; 
-            width: 700px; 
-            margin-right: 500px; 
-        }
-        .faq-container {
-            max-width: 800px;
-            margin: 0px auto;
-            border-top: 1px solid #ddd;
-        }
-        .faq-item {
-            border-bottom: 1px solid #ddd;
-        }
-        .faq-question {
-            padding: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-answer {
-            display: none;
-            padding: 15px;
-            color: #333;
-        }
-        .faq-question.active + .faq-answer {
-            display: block;
-        }
+    .footer-column {
+        width: 22%;
+        min-width: 200px;
+    }
 
-        .faq-title {
-            text-align: center; /* Căn giữa tiêu đề theo mặc định */
-            margin-left: -1100px; /* Dịch sang trái một chút (tùy chỉnh giá trị) */
-        }
-        .feedback-container {
-            border: 1px solid #ccc; /* Viền xám */
-            padding: 20px; /* Khoảng cách bên trong ô */
-            margin-bottom: 20px; /* Khoảng cách với các phần tử khác */
-            background-color: #f9f9f9; /* Màu nền nhạt */
-        }
+    .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 
-        .feedback-container h2 {
-            color: #333; /* Màu chữ đậm */
-        }
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
 
-        .feedback-container textarea {
-            width: 100%; /* Chiều rộng 100% */
-            border: 1px solid #ccc; /* Viền xám */
-            padding: 10px; /* Khoảng cách bên trong vùng nhập liệu */
-        }
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
 
-        .feedback-container button {
-            background-color: #007bff; /* Màu xanh */
-            color: white; /* Màu chữ trắng */
-            padding: 10px 20px; /* Kích thước nút */
-            border: none; /* Bỏ viền */
-            cursor: pointer; /* Hiệu ứng khi di chuột vào */
-        }
+    .footer-column ul li a {
+        color: #d4d4d4;
+        text-decoration: none;
+        font-size: 14px;
+    }
 
-        .container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .footer-column ul li a:hover {
+        color: #ffffff;
+    }
 
-        .footer-column {
-            width: 22%;
-            min-width: 200px;
-        }
+    /* Nút đăng ký */
+    .signup-btn {
+        background-color: #ffffff;
+        color: #131A22;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        .footer-column h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
+    .signup-btn:hover {
+        background-color: #d4d4d4;
+    }
 
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Icon mạng xã hội */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
+    .social-icons {
+        margin: 15px 0;
+    }
 
-        .footer-column ul li a {
-            color: #d4d4d4;
-            text-decoration: none;
-            font-size: 14px;
-        }
+    .social-icons a {
+        color: #ffffff;
+        font-size: 20px;
+        margin: 0 10px;
+        transition: 0.3s;
+    }
 
-        .footer-column ul li a:hover {
-            color: #ffffff;
-        }
+    .social-icons a:hover {
+        color: #d4d4d4;
+    }
 
-        /* Nút đăng ký */
-        .signup-btn {
-            background-color: #ffffff;
-            color: #131A22;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    /* Văn bản cuối */
+    .footer-bottom p {
+        font-size: 12px;
+        color: #b5b5b5;
+        margin-top: 10px;
+        max-width: 800px;
+        margin: auto;
+    }
 
-        .signup-btn:hover {
-            background-color: #d4d4d4;
-        }
+    footer {
+        background-color: #131A22;
+        color: white;
+        padding: 30px 0;
+    }
 
-        /* Icon mạng xã hội */
-        .footer-bottom {
-            text-align: center;
-            margin-top: 20px;
-        }
+    .footer-column ul li a {
+        color: white;
+    }
 
-        .social-icons {
-            margin: 15px 0;
-        }
+    .signup-btn {
+        background-color: #ffffff;
+        color: #131A22;
+    }
 
-        .social-icons a {
-            color: #ffffff;
-            font-size: 20px;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #d4d4d4;
-        }
-
-        /* Văn bản cuối */
-        .footer-bottom p {
-            font-size: 12px;
-            color: #b5b5b5;
-            margin-top: 10px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        footer {
-            background-color: #131A22;
-            color: white;
-            padding: 30px 0;
-        }
-
-        .footer-column ul li a {
-            color: white;
-        }
-
-        .signup-btn {
-            background-color: #ffffff;
-            color: #131A22;
-        }
-
-        .social-icons a {
-            color: white;
-        }
+    .social-icons a {
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -342,41 +376,66 @@ body {
     </header>
 
     <main>
-        <section class="heroo">
-            <div class="hero-contentt">
-                <h1 class="chuviet">Trí tuệ nhân tạo (AI) là gì?</h1>
-                <p class="chuvietthuong">Trí tuệ nhân tạo (AI) là một công nghệ có khả năng giải quyết vấn đề như con <br>người.Cách thức hoạt động của AI dường như mô phỏng trí tuệ của con người <br> AI có thể nhận dạng hình ảnh,làm thơ và đưa ra dự đoán dựa trên dữ liệu.
-                </p>
+        <div class="heroo-section">
+            <div class="heroo-content" style="color: white; text-align: center;">
+                <h1 style="color: #ffffff;">Trí tuệ nhân tạo (AI)</h1>
+                <p style="color: #ffffff;">Trí tuệ nhân tạo (AI) là một công nghệ có khả năng giải quyết vấn đề...</p>
+                <button class="cta-button" style="background: darkblue; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; margin-top: 10px;">
+                    Tìm hiểu thêm
+                </button>
             </div>
+        </div>
         </section>
         <section class="hero">
             <div class="hero-content">
-                <h2>Các loại AI phổ biến:</h2>
+                <h2>Trí tuệ nhân tạo (AI)</h2>
+                <p>Trí tuệ nhân tạo (AI) là một công nghệ có khả năng giải quyết vấn đề như con người.Cách thức hoạt động của AI dường như mô phỏng trí tuệ của con người  AI có thể nhận dạng hình ảnh,làm thơ và đưa ra dự đoán dựa trên dữ liệu.</p>
+                <h3>Phân loại AI</h3>
                 <p>AI hẹp (Narrow AI) – Chỉ thực hiện một nhiệm vụ cụ thể như chatbot, nhận diện khuôn mặt, dự đoán thời tiết.</p>
                 <p>AI tổng quát (General AI) – Có khả năng tư duy và giải quyết vấn đề như con người (vẫn đang trong quá trình nghiên cứu).</p>
                 <p>AI siêu việt (Super AI) – Trí tuệ vượt xa con người (chưa tồn tại).</p>
-                <h3>AI hoạt động như thế nào?</h3>
+                <h4>AI hoạt động như thế nào?</h4>
                 <p>AI sử dụng các thuật toán, mô hình học máy (Machine Learning), mạng nơ-ron nhân tạo (Neural Networks) và xử lý dữ liệu lớn (Big Data) để phân tích, nhận diện mẫu và đưa ra quyết định.Trí tuệ nhân tạo (AI) hoạt động dựa trên khả năng học hỏi từ dữ liệu, phân tích thông tin và đưa ra quyết định. AI sử dụng các thuật toán và mô hình toán học để mô phỏng tư duy của con người. Dưới đây là các nguyên lý chính giúp AI hoạt động:</p>
                 <h3>Các công ty phát triển AI trên thế giới</h3>
-                <h3>Trí tuệ nhân tạo của Google </h3>
+                <h4>Trí tuệ nhân tạo của Google </h4>
                 <p> Google vẫn là một “cường quốc” trong lĩnh vực đổi mới AI thông với bộ phận nghiên cứu chuyên dụng của mình - Google AI. Được biết đến với các dự án đột phá như DeepMind và TensorFlow, Google tiếp tục dẫn đầu về xử lý ngôn ngữ tự nhiên, thị giác máy tính và học tăng cường. Những tiến bộ về AI của Google trải rộng trên nhiều lĩnh vực khác nhau, từ chăm sóc sức khỏe đến hệ thống tự trị.</p>
-                <h3>OpenAI</h3>
+                <h4>OpenAI</h4>
                 <p>OpenAI, một phòng thí nghiệm nghiên cứu cam kết phát triển AI an toàn và có lợi, đã góp phần thúc đẩy các khả năng của trí tuệ nhân tạo. Được biết đến với các mô hình GPT (Generative Pre-training Transformer), OpenAI đóng vai trò then chốt trong việc tạo và hiểu ngôn ngữ tự nhiên. Cách tiếp cận hợp tác và cởi mở đã thúc đẩy sự phát triển có trách nhiệm của công nghệ AI. </p>
-                <h3>Trí tuệ nhân tạo của Microsoft</h3>
+                <h4>Trí tuệ nhân tạo của Microsoft</h4>
                 <p> Cam kết của Microsoft đối với AI được thể hiện rõ ràng thông qua Azure AI và nền tảng dịch vụ nhận thức của nó. Công ty tập trung vào việc dân chủ hóa AI bằng cách cung cấp các công cụ dễ tiếp cận cho các nhà phát triển để tích hợp khả năng AI vào các ứng dụng của họ. Những đổi mới về AI của Microsoft bao gồm các giải pháp điện 3toán đám mây, chăm sóc sức khỏe và doanh nghiệp.</p>
-                <h3>IBM Watson  </h3>
+                <h4>IBM Watson  </h4>
                 <p> IBM Watson vẫn là nhân tố chủ chốt trong lĩnh vực AI, đặc biệt là trong lĩnh vực doanh nghiệp. Với khả năng tính toán về nhận thức của mình, Watson được sử dụng trong các lĩnh vực như chẩn đoán chăm sóc sức khỏe, tài chính và dịch vụ khách hàng. IBM tiếp tục đầu tư vào nghiên cứu và phát triển AI, đảm bảo Watson luôn đi đầu trong các<br> tiến bộ công nghệ.</p>
-                <h3>AI của Facebook</h3>
+                <h4>AI của Facebook</h4>
                 <p>ộ phận nghiên cứu AI (FAIR) của Facebook đang đóng góp tích cực vào việc phát triển công nghệ AI, đặc biệt là trong lĩnh vực thị giác máy tính, xử lý ngôn ngữ tự nhiên và học tập tăng cường. Các sáng kiến AI của công ty này còn mở rộng sang việc nâng cao trải nghiệm người dùng, kiểm duyệt nội dung và thực tế ảo.</p>
-                <h3> OpenAI và MetaAI </h3>
+                <h4> OpenAI và MetaAI </h4>
                 <p>AI của Meta (Llama) và OpenAI (GPT-4) đều có những thế mạnh riêng, tùy vào mục đích sử dụng mà một bên có thể vượt trội hơn bên còn lại. Llama của Meta là một mô hình mã nguồn mở, cho phép tùy chỉnh theo nhu cầu, phù hợp với các nhà nghiên cứu và doanh nghiệp muốn triển khai AI theo cách riêng. Tuy nhiên, khả năng sáng tạo nội dung tổng quát của nó có thể không mạnh bằng GPT-4. Trong khi đó, AI của OpenAI, đặc biệt là ChatGPT, có khả năng xử lý ngôn ngữ tự nhiên tốt, sáng tạo nội dung phong phú và dễ sử dụng cho người dùng phổ thông. GPT-4 cũng được tích hợp trên nhiều nền tảng, hỗ trợ lập trình, học tập và trợ lý ảo một cách linh hoạt. Nếu bạn muốn một AI mã nguồn mở để tùy chỉnh, Meta có lợi thế. Nhưng nếu bạn cần một AI mạnh về sáng tạo, dễ sử dụng, và thân thiện với người dùng, thì OpenAI là lựa chọn tốt hơn.</p>
             </div>
             <div class="hero-image">
-                <img src="https://i.imgur.com/p4NBaMT.png" alt="Hình ảnh AI">
+                <img src="https://i.imgur.com/piw22vz.png" alt="hình 1">
                 <h3>Tương lai và tầm nhìn phát triển của AI</h3>
                 <p>Trí tuệ nhân tạo (AI) trong tương lai sẽ đóng vai trò trung tâm trong sự phát triển của thế giới<br>.tác động mạnh mẽ đến mọi lĩnh vực từ kinh tế, y tế, giáo dục cho đến đời sống xã <br>hội. AI sẽ giúp tự động hóa nhiều công việc phức tạp, nâng cao hiệu suất lao động <br>và giảm bớt sự phụ thuộc vào sức người đặc biệt trong các ngành sản xuất, tài chính<br> và giao thông.Trong y tế, AI có thể chẩn đoán bệnh sớm hơn con người, hỗ trợ <br>phẫu thuật chính xác hơn và cá nhân hóa phương pháp điều trị. AI cũng sẽ cách <br>mạng hóa giáo dục bằng các hệ thống học tập thông minh, giúp học sinh tiếp cận kiến<br> thức một cách linhhoạt và hiệu quả hơn. Tuy nhiên, sự phát triển mạnh mẽ của <br>AI cũng đặt ra nhiều thách thức, như vấn đề đạo đức, quyền riêng tư và nguy cơ mất <br>việc làm do động hóa. Vì vậy, con người cần có tầm nhìn dài hạn để kiểm soát và <br>định hướng AI theo hướng phát triển bền vững, giúp nâng cao chất lượng cuộc sống <br>mà không gây ra những hệ lụy tiêu cực.</p> 
-                <img src="https://i.imgur.com/piw22vz.png" alt="hình 1">
-
+                <h3>Tiềm năng của AI trên thế giới</h3>
+                <h4>Trong Y tế & Chăm sóc sức khỏe</h4>
+                <p>+ Chẩn đoán bệnh: AI có thể phân tích hình ảnh y khoa (CT, MRI, X-ray) để phát hiện sớm bệnh ung thư, tim mạch,...<br>
+                + Phát triển thuốc: AI giúp tăng tốc quá trình nghiên cứu và thử nghiệm thuốc mới.<br>
+                + Bác sĩ ảo: Chatbot và trợ lý AI hỗ trợ tư vấn sức khỏe từ xa.<br>
+                + Theo dõi sức khỏe: AI kết hợp với thiết bị đeo tay (smartwatch) để theo dõi nhịp tim, huyết áp, đường huyết<br></p>
+                <h4>Trong Công nghiệp & Sản xuất</h4>
+                <p>+ Tự động hóa nhà máy: Robot AI thay thế công nhân trong sản xuất hàng loạt.<br>
+                Bảo trì dự đoán: AI phân tích dữ liệu để dự đoán hỏng hóc, giúp tiết kiệm chi phí sửa chữa.<br>
+                Tối ưu hóa chuỗi cung ứng: AI giúp dự đoán nhu cầu hàng hóa, tối ưu kho bãi và vận chuyển..<br></p>
+                <h4>Trong Kinh doanh & Tài chính</h4>
+                <p>+ Phân tích dữ liệu & Dự báo thị trường: AI dự đoán xu hướng chứng khoán, hành vi tiêu dùng,<br>
+                + Chatbot & Dịch vụ khách hàng: Tự động hóa chăm sóc khách hàng 24/7.<br>
+                + Phát hiện gian lận: AI giúp phát hiện giao dịch bất thường để ngăn chặn gian lận tài chính.<br></p>
+                <h4>Trong Giao thông & Ô tô tự lái</h4>
+                <p>+ Xe tự lái: AI giúp phân tích giao thông, nhận diện vật cản, điều hướng xe thông minh.<br>
+                + Quản lý giao thông: AI hỗ trợ điều tiết đèn giao thông, tối ưu lộ trình.<br>
+                + Dự báo tai nạn: Phân tích dữ liệu để dự đoán và cảnh báo tai nạn.<br></p>
+                <h4>Trong Giáo dục</h4>
+                <p>+ Học tập cá nhân hóa: AI đề xuất tài liệu học tập phù hợp với từng học sinh.<br>
+                + Chatbot dạy học: AI có thể trả lời câu hỏi và hướng dẫn bài tập.<br>
+                + Dịch thuật & Học ngôn ngữ: AI hỗ trợ dịch thuật và phát triển công cụ học ngoại ngữ (Duolingo AI,...)<br></p>
             </div>
         </section>
 
@@ -420,12 +479,11 @@ body {
             <h3>3. Thách thức và cơ hội</h3>
             <p>Mặc dù AI tại Việt Nam có tiềm năng lớn, nhưng vẫn gặp một số thách thức như:Thiếu nguồn nhân lực chất lượng cao về AI.Dữ liệu huấn luyện AI còn hạn chế và chưa được chuẩn hóa tốt.Đầu tư vào nghiên cứu và phát triển AI vẫn chưa mạnh bằng các nước phát triển.</p>
             <p>Tuy nhiên, với sự quan tâm của chính phủ và sự phát triển nhanh chóng của các doanh nghiệp công nghệ, AI tại Việt Nam hứa hẹn sẽ trở thành một lĩnh vực quan trọng trong nền kinh tế số, giúp nâng cao năng suất lao động và chất lượng cuộc sống. </p>
-            
+            <h2>Ứng dụng của AI</h2>
 
         </section>
 
         <section class="applications">
-            <h2>Ứng dụng của AI</h2>
             <div class="application">
                 <img src="https://i.imgur.com/npkaCS4.png" alt="Ứng dụng 1">
                 <h3>Ứng dụng 1</h3>
@@ -476,8 +534,8 @@ body {
         <div class="faq-container">
             <h1 class="faq-title">Câu hỏi về chủ đề AI</h1>
             <div class="faq-item">
-                <div class="faq-question">API là viết tắt của từ nào? <span>+</span></div>
-                <div class="faq-answer">API là viết tắt của Application Programming Interface.</div>
+                <div class="faq-question">AI tại Việt Nam <span>+</span></div>
+                <div class="faq-answer">Đóng vai trò quan trọng trong nhiều lĩnh vực.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">AI (trí tuệ nhân tạo) có nghĩa là gì? <span>+</span></div>
@@ -520,7 +578,7 @@ body {
         <footer class="footer">
         <div class="container">
             <div class="footer-column">
-                <h3>Tìm hiểu sâu về AI</h3>
+                <a>Tìm hiểu sâu về AI</a>
                 <ul>
                     <li><a href="#">AI là gì?</a></li>
                     <li><a href="#">Tác động của AI</a></li>
@@ -529,7 +587,7 @@ body {
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Tài nguyên dành để phát triển AI</h3>
+                <a>Tài nguyên dành để phát triển AI</a>
                 <ul>
                     <li><a href="#">Bắt đầu</a></li>
                     <li><a href="#">Tài liệu</a></li>
@@ -537,7 +595,7 @@ body {
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Ngôn ngữ phát triển</h3>
+                <a>Ngôn ngữ phát triển</a>
                 <ul>
                     <li><a href="#">HTML</a></li>
                     <li><a href="#">CSS</a></li>
@@ -545,7 +603,7 @@ body {
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Trợ giúp</h3>
+                <a>Trợ giúp</a>
                 <ul>
                     <li><a href="#">Liên hệ với chúng tôi</a></li>
                     <li><a href="#"> AI Support</a></li>
